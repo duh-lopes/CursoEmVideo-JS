@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1>Sistema de países</h1>
+    Em qual país você mora: <input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="Verificar" onclick="analisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function analisar() {
+            var txtpaís = window.document.querySelector('input#txtpaís')
+            var país = String(txtpaís.nodeValue)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `Você mora no país: ${país}`
+            if (país == 'Brasil') {
+                res.innerHTML = 'Você é Brasileiro'
+            } else {
+                res.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
